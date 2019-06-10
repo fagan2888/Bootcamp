@@ -13,4 +13,5 @@ function whoIsStronger(getStrength) {
         return "I am stronger";
     } else return "You are stronger";
 }
-whoIsStronger(hero.getStrength);
+
+console.log(whoIsStronger(hero.getStrength.bind(hero)));
