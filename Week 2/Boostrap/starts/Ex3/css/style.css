@@ -1,0 +1,42 @@
+
+.nav {
+    border: 2px solid #1B9CFC;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 1%;
+}
+.first-row {
+    border: 2px solid #1B9CFC;
+    align-items: center;
+    margin-bottom: 1%;
+    height: 200px;
+
+}
+.bg {
+    background-color:#F8EFBA;
+}
+.common-row {
+    align-items: center;
+    margin-bottom: 1%;
+
+}
+.col-xs-4 {
+    border: 2px solid #1B9CFC;
+    height: 230px;
+    width:250px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.footer {
+        border: 2px solid #1B9CFC;
+        margin-bottom: 1%;
+
+}
+.row {
+    justify-content: center;
+}
+.row.hight {
+    height: 80px;
+}

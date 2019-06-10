@@ -1,0 +1,12 @@
+.img-fluid {
+    border:2px solid #7ed6df;
+    width: 500px;
+}
+.tab-content {
+    justify-content: center;
+    margin-top:5%;
+    display: flex;
+}
+.nav.nav-tabs {
+    justify-content: center;
+}

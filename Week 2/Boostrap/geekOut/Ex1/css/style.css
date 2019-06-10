@@ -1,0 +1,37 @@
+.font {
+    font-family: 'Cute Font', cursive;
+    font-size: 4em;
+
+}
+span {
+    font-weight: bold;
+    
+}
+
+.img-fluid {
+    width: 160px;
+}
+.row {
+    margin-top:2%;
+}
+.title {
+    margin-top:1%; 
+}
+
+.my-form {
+    border:none;
+    border-bottom: 2px solid #74b9ff;
+    border-radius: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    -ms-border-radius: none;
+    -o-border-radius: none;
+    background-clip: none;
+}
+.form-row {
+    margin-top: 2%;
+}
+.submit {
+    margin-top: 10%;
+    justify-content: flex-end;
+}

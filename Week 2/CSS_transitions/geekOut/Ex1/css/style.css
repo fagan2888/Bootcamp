@@ -1,0 +1,20 @@
+  
+    div {
+        position: relative;
+        border: 2px solid #1abc9c;
+        background-color: #e67e22;
+        width: 100px;
+        height: 100px;
+        left:0;
+        /* max-width: 450px; */
+    }
+
+    .box {
+        transition: left 2s ease-in-out 1s;
+        -webkit-transition: left 2s ease-in-out 1s;
+        -moz-transition: left 2s ease-in-out 1s;
+        -ms-transition: left 2s ease-in-out 1s;
+        -o-transition: left 2s ease-in-out 1s;
+}
+
+

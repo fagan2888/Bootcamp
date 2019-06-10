@@ -1,0 +1,23 @@
+
+.nav {
+    background-color: #1abc9c;
+    justify-content: center;
+    border: 2px solid black;
+
+
+}
+.header {
+    font-size:50px;
+}
+
+.size-img {
+    width: 100px;
+    height: 100px;
+}
+
+.padding-img {
+    background-color: #1abc9c;
+    border: 2px solid black;
+
+
+}

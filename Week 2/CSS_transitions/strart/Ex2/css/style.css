@@ -1,0 +1,29 @@
+body,html {
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #2ecc71;
+    height: 100%;
+    width: 90%;
+}
+
+.box {
+    background-color: #f1c40f;
+    border: 2px solid black;
+    margin: 1%;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+ .container:hover .box {
+    width: 800px;
+    transition: all 1s ease-in-out ;
+    -webkit-transition: all 1s ease-in-out ;
+    -moz-transition: all 1s ease-in-out ;
+    -ms-transition: all 1s ease-in-out ;
+    -o-transition: all 1s ease-in-out ;
+}
