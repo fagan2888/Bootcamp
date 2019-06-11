@@ -5,9 +5,10 @@ const printObject = {
     }, 
     printNameAfterSec:function () {
         setTimeout( function(){
-        console.log(this.name)
+             console.log(this.name)
         }.bind(this), 1000);
     }
 }
 printObject.printName();
 printObject.printNameAfterSec();
+
