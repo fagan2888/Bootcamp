@@ -6,8 +6,13 @@ class Dog {
         this.isCuddle = isCuddle;
     }
 }
-function getDogsOfType (type,dogs) {
-    let newArrDog = dogs.filter((dog)=> {dog.type === type })
+function getDogsOfType (dogs,type) {
+    let newArrDog = [];
+    for (let index = 0; index < dogs.length; index++) {
+        if (dogs[index].type === type) {
+             newArrDog.push(dogs[index].name);
+        }
+    } 
     return newArrDog;
 }
 
