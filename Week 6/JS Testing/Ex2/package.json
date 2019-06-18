@@ -1,0 +1,15 @@
+{
+  "name": "ex2",
+  "version": "1.0.0",
+  "description": "transpose test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Yakir Ifrah",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
