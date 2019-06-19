@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+            describe() {
+                return `i am animal`;
+
+            }
+        }
+        class Cat extends Animal {
+            constructor(name, isFriendly) {
+                super(name, 'cat');
+                this.isFriendly = (isFriendly === true) ? `friendly` : `not friendly`;
+            }
+            describe() {
+                return `I am ${this.name} and  ${this.isFriendly}`;
+            }
+        }
+        let cat = new Cat('mithi', false);
+
+
+    </script>
+</body>
+
+</html>

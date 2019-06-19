@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Drink {
+            constructor(title, isHot) {
+                this.title = title;
+                this.isHot = isHot;
+            }
+        }
+        class Coffee extends Drink {
+            constructor(isHot, numberOfShots, isWithMilk) {
+                super('coffe', isHot);
+                this.isWithMilk = isWithMilk;
+                this.numberOfShots = numberOfShots;
+            }
+            describe() {
+                this.isWithMilk = (this.isWithMilk) ? `add milk` : `don't add milk`;
+                return `${this.numberOfShots} of ${this.isHot ? `hot` : 'doesnt hot'} ${this.title} and  ${this.isWithMilk}`;
+            }
+        }
+        let coffe1 = new Coffee(true, 1, false);
+        let coffe2 = new Coffee(true, 4, true);
+
+    </script>
+</body>
+
+</html>
