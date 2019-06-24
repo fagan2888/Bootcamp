@@ -1,23 +1,22 @@
 class Plant {
-    constructor (season,color,blossom) {
-        this.season = season;
+    constructor(name, color, seasons, isBlossom) {
+        this.name = name;
         this.color = color;
-        this.blossom = blossom;
+        this.seasons = seasons;
+        this.isBlossom = isBlossom;
+    }
+    isBlossomInSeason(season) {
+        return this.isBlossom && this.seasons.includes(season);
     }
 }
-let plants = [new Plant('summer','red',true),new Plant('autumn','yellow',false),new Plant('summer','white',true)];
+const p1 = new Plant("Anemone", "red", ["autumn"], true);
+const p2 = new Plant("tulip", "red", ["spring"], true);
+const p3 = new Plant("Boston fern", "green", ["spring", "summer"], false);
+let plants = [p1, p2, p3, p4, p5];
 function getPlantsBySeason(plants, season) {
-    let plantInSeason = [];
-    for (let index = 0; index < plants.length; index++) {
-        if (plants[index].season === season && plants[index].blossom) {
-            plantInSeason.push(plants[index]);
-        }
- }
-    return plantInSeason;
+    return plants.filter(plant => plant.isBlossomInSeason(season));
 }
-let result = getPlantsBySeason(plants,'summer');
-console.log(result);
-
-
-
-
+//test case:
+console.log(getPlantsBySeason(plants, "spring"));
+console.log(getPlantsBySeason(plants, "autumn"));
+console.log(getPlantsBySeason(plants, "summer"));
