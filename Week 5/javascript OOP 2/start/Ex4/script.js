@@ -12,7 +12,7 @@ class Plant {
 const p1 = new Plant("Anemone", "red", ["autumn"], true);
 const p2 = new Plant("tulip", "red", ["spring"], true);
 const p3 = new Plant("Boston fern", "green", ["spring", "summer"], false);
-let plants = [p1, p2, p3, p4, p5];
+let plants = [p1, p2, p3];
 function getPlantsBySeason(plants, season) {
     return plants.filter(plant => plant.isBlossomInSeason(season));
 }
