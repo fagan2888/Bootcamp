@@ -1,0 +1,71 @@
+.power.on {
+    background-image: url('../img/power-button-on.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.power {
+    position: absolute;
+    top: 60px;
+    right: 67px;
+
+}
+
+
+.power.off {
+    background-image: url('../img/power-button-off.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.container-fluid {
+    display: flex;
+    width: fit-content;
+    position: relative;
+}
+
+.description {
+    display: flex;
+    border: 2px solid #1abc9c;
+    width: 23vh;
+    height: 5vh;
+    position: absolute;
+    bottom: 22%;
+    left: 41%;
+    background-color: #fff;
+}
+
+.cool {
+    background-image: url('../img/cool.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.dry {
+    background-image: url('../img/dry.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.fan {
+    background-image: url('../img/fan.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.temp {
+    font-family: 'Rubik Mono One',
+        sans-serif;
+    margin-left: 35px;
+    margin-top: 3px;
+
+}
