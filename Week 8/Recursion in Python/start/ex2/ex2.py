@@ -1,4 +1,6 @@
 def max(list):
+    if len(list) == 0:
+        return 'the list is empty'
     if len(list) <= 1:
         return list[0]
     else:
@@ -6,4 +8,4 @@ def max(list):
     return m if m > list[0] else list[0]
 
 
-print(max([1, 2, 3, 3, 429, 2]))
+print(max([]))
