@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome {{first_name}}</h1>
+    <h3>We are very happy to greet you {{first_name}} {{last_name}}</h3>
+    {% if first_name[0].lowercase() =='g' %}
+    <p>We are very happy to greet you {{first_name}} {{last_name}}
+        Congratulation {{first_name}}! In order to get the prize you need to:
+    </p>
+    <ul>
+        <li>Send us an email to lottery@gmail.com</li>
+        <li>Attach to the email a picture of yourself writing code</li>
+        <li>Wait for a reply</li>
+    </ul>
+    {% else %}
+    <p>We are very happy to greet you {{first_name}} {{last_name}}
+        Congratulation {{first_name}}! In order to get the prize you need to:
+    </p>
+    <ul>
+        <li>Fill in our winners form in https://hitechlottery.com/form</li>
+        <li>Wait for a reply</li>
+    </ul>
+    {%endif%}
+
+</body>
+
+</html>
