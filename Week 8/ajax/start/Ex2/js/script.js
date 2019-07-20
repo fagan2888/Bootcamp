@@ -1,6 +1,5 @@
 $(document).ready(function () {
     //adding event listeners
-    $('#addColorSubmit').bind('click', addColorToServer);
     $('#getColorSubmit').bind('click', getColorFromServer);
 });
 
@@ -20,7 +19,7 @@ addColorToServer = function () {
         },
         error: function (msg) {
             console.log("error");
-            console.log(msg);
+            alert(msg);
         }
     });
 };
@@ -40,8 +39,8 @@ getColorFromServer = function () {
             listColor.append(ul);
         },
         error: function (msg) {
-            console.log(msg);
             console.log("error");
+            alert(msg);
         }
     })
 };
