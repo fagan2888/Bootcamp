@@ -1,9 +1,21 @@
-.bgc {
-    width: 200px;
-    height: 200px;
+#img {
+    width: 400px;
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 44px;
-    
-    
+}
+
+.bird-1 {
+    background-image: url("../src/img/YdvkXNmW.jpeg");
+}
+
+.bird-2 {
+    background-image: url("../src/img/bird.webp");
+
+}
+
+.bird-3 {
+    background-image: url("../src/img/quazar.jpg");
 }
