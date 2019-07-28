@@ -1,4 +1,4 @@
-from bottle import run, get, post, delete, request,route,template
+from bottle import run, get, post, delete, request, route, template, put
 from pymysql import cursors, connect
 import json
 
@@ -12,13 +12,13 @@ connection = connect(
     cursorclass=cursors.DictCursor
 )
 
+
 @route('/')
 def index():
-   return template("welcome to bootcamp");
+    return template("welcome to bootcamp")
 
 
-
-@get('/get_students')
+@get('/students')
 def get_students():
     try:
         with connection.cursor() as cursor:
@@ -30,7 +30,7 @@ def get_students():
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@get('/get_student/<id:int>')
+@get('/students/<id:int>')
 def get_student(id):
     try:
         with connection.cursor() as cursor:
@@ -42,7 +42,7 @@ def get_student(id):
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@put('/update_student')
+@put('/students')
 def update_student():
     try:
         with connection.cursor() as cursor:
@@ -57,7 +57,7 @@ def update_student():
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@post('/add_student')
+@post('/students')
 def add_student():
     try:
         with connection.cursor() as cursor:
@@ -70,7 +70,7 @@ def add_student():
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@delete('/delete_student')
+@delete('/students')
 def del_student():
     try:
         with connection.cursor() as cursor:
@@ -82,7 +82,7 @@ def del_student():
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@get('/get_cohrts')
+@get('/cohrts')
 def get_cohrts():
     try:
         with connection.cursor() as cursor:
@@ -90,12 +90,11 @@ def get_cohrts():
             cursor.execute(get_cohrts)
             result = cursor.fetchall()
             return json.dumps(result)
-
     except:
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@get('/get_cohrt/<id:int>')
+@get('/cohrts/<id:int>')
 def get_cohrt(id):
     try:
         with connection.cursor() as cursor:
@@ -107,7 +106,7 @@ def get_cohrt(id):
         return json.dumps({'error': 'something is worng with the DB'})
 
 
-@post('/add_cohrt')
+@post('/cohrts')
 def add_cohrt():
     try:
         with connection.cursor() as cursor:
@@ -119,33 +118,35 @@ def add_cohrt():
             connection.commit()
     except:
         return json.dumps({'error': 'something is worng with the DB'})
-@put('/update_cohrt')
-def update_cohrt():
-        try:
-                with connection.cursor() as cursor:
-                        student_id = request.json.get('student_id')
-                        cohrt_id = request.json.get('cohrt_id')
-                        cohrt_name = request.json.get('cohrt_name')
-                        update_cohrt = 'UPDATE cohrts SET cohrt_name = %(cohrt_name)s WHERE student_id = %(student_id)s and cohrt_id = %(cohrt_id)s'
-                        cursor.execute(
-                            update_cohrt, {"cohrt_name": cohrt_name, "student_id": student_id, "cohrt_id": cohrt_id})
-                        connection.commit()
-        except:
-                return json.dumps({'error': 'something is worng with the DB'})
 
-@delete('/del_cohrt')
-def delete():
+
+@put('/cohrts')
+def update_cohrt():
     try:
-         with connection.cursor() as cursor:
-                        student_id = request.json.get('student_id')
-                        cohrt_id = request.json.get('cohrt_id')
-                        update_cohrt = 'UPDATE cohrts SET cohrt_name = null WHERE student_id = %(student_id)s and cohrt_id = %(cohrt_id)s'
-                        cursor.execute(
-                            update_cohrt, {"student_id": student_id, "cohrt_id": cohrt_id})
-                        connection.commit()
+        with connection.cursor() as cursor:
+            student_id = request.json.get('student_id')
+            cohrt_id = request.json.get('cohrt_id')
+            cohrt_name = request.json.get('cohrt_name')
+            update_cohrt = 'UPDATE cohrts SET cohrt_name = %(cohrt_name)s WHERE student_id = %(student_id)s and cohrt_id = %(cohrt_id)s'
+            cursor.execute(
+                update_cohrt, {"cohrt_name": cohrt_name, "student_id": student_id, "cohrt_id": cohrt_id})
+            connection.commit()
     except:
         return json.dumps({'error': 'something is worng with the DB'})
-                
+
+
+@delete('/cohrts')
+def delete():
+    try:
+        with connection.cursor() as cursor:
+            student_id = request.json.get('student_id')
+            cohrt_id = request.json.get('cohrt_id')
+            update_cohrt = 'UPDATE cohrts SET cohrt_name = null WHERE student_id = %(student_id)s and cohrt_id = %(cohrt_id)s'
+            cursor.execute(
+                update_cohrt, {"student_id": student_id, "cohrt_id": cohrt_id})
+            connection.commit()
+    except:
+        return json.dumps({'error': 'something is worng with the DB'})
 
 
 if __name__ == "__main__":

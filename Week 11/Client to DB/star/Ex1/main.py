@@ -33,7 +33,5 @@ def cheack_actors():
             print(actor["full_name"])
     else:
         print("The list of actors not exits in DB")
-
-
 if __name__ == "__main__":
     cheack_actors()
