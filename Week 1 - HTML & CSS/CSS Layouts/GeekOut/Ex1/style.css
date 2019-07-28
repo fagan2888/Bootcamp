@@ -1,0 +1,102 @@
+    *{
+        box-sizing: border-box;
+        }
+        body {
+            height: 600px;
+        }
+        .stripe {
+            border: 1px solid black;
+        }
+        .stripe.main-page {
+            height: 480px;
+            position: relative;
+        }
+
+        .stripe.main-page .left-page {
+            width: 200px;
+            padding: 15px;
+            display: inline-block;
+            background-color: #fab1a0;
+            height: inherit;
+
+        } 
+
+        .stripe.main-page .right-page {
+            width: 200px;
+            display: inline-block;
+            background-color: #fdcb6e;
+            height: inherit;
+            position: absolute;
+            padding:15px;
+            right: 0px;
+        } 
+        .stripe.header .navigation {
+            margin:20px;
+        }
+
+        .stripe.main-page .middle-page {
+            padding: 15px;
+            display: inline-block;
+            height: inherit;
+            margin-left:15px;
+            margin-right:15px;
+            width:calc(100% - 430px);
+        }
+        .stripe.footer {
+            height: 10%;
+        }
+
+        .stripe.header img {
+            height: 20px;
+            width: 20px;
+        } 
+
+        .stripe.header #itc_logo {
+            height: auto;
+            width: auto;
+            margin-right:500px;
+        
+        }
+
+
+        .stripe.header .navigation  span {
+            display: inline-block;
+        }
+
+        
+    a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        font-size:13px;
+        font-weight: 600;
+        
+    }
+    .stripe.header .navigation  {
+        right: 4px;
+    }
+
+ 
+
+    .stripe.header .navigation {
+        display: inline-block;
+
+
+    }
+    .stripe.header .navigation  span {
+        margin: 20px;
+    }
+    .stripe.header {
+        text-align: center;
+        background-image: linear-gradient( white, #d3d3d333);
+
+    }
+
+    .navigation .middle , .navigation .social-networks {
+        display: inline-block;
+    }
+
+    .navigation .middle {
+        margin:auto;
+
+    }

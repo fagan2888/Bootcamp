@@ -1,0 +1,28 @@
+.fetures.stripe .item {
+    background-color: black;
+    display: inline-block;
+    margin: 2%;
+    vertical-align: top;
+    text-align: left;
+    color:white;
+    width: 20%;
+    display: inline-block;
+
+}
+
+.fetures.stripe .item .title{
+    font-size: 2em;  
+}
+
+.fetures.stripe .item .text{
+    font-size: 1em;  
+}
+
+
+@media screen and (max-width:500px){
+    .fetures.stripe .item {
+        display: block;
+        width: 80%;
+        margin:20px auto;
+    }
+} 

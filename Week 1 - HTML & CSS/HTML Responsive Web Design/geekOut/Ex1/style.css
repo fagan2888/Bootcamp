@@ -1,0 +1,32 @@
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.stripe {
+  border: 1px solid blue;
+  height: 25%;
+}
+.stripe.menu,
+.stripe.footer {
+  height: 10%;
+}
+@media screen and (min-width: 300px) {
+  .stripe {
+    background-color: blue;
+  }
+}
+@media screen and (min-width: 600px) {
+  .stripe {
+    background-color: cadetblue;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .stripe {
+    background-color: yellow;
+  }
+}
+
