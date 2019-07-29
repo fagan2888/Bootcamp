@@ -1,0 +1,54 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-image:url("../src/img/white-scratched-background-2074.png");
+    /* background-repeat: no-repeat; */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.end-style {
+    font-family: 'Lobster', cursive;
+    font-size: 80px;
+
+}
+h1.style-title {
+    font-size: 3em;
+    font-weight:400;
+    font-family: 'Inconsolata', monospace;
+}
+/* .list-group-item {
+
+} */
+
+h3.question-style {
+font-size: 2em;
+font-weight: 600;
+font-family: 'Indie Flower', cursive;
+
+}
+
+
+p {
+   max-width: 800px;
+   font-size:1.5em;
+   font-weight: 600;
+   letter-spacing: .15em;
+}
+
+.ml {
+    margin-left: auto;
+}
+
+
+.carousel.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity ease-out .1s;
+    -webkit-transition: opacity ease-out .1s;
+    -moz-transition: opacity ease-out .1s;
+    -ms-transition: opacity ease-out .1s;
+    -o-transition: opacity ease-out .1s;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
