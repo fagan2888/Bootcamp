@@ -1,4 +1,4 @@
-#!"C:\dev\Bootcamp\Bootcamp-Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv\Scripts\python.exe"
+#!"C:\dev\Bootcamp\Bootcamp\Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv\Scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'autopep8==1.4.4','console_scripts','autopep8'
 __requires__ = 'autopep8==1.4.4'
 import re

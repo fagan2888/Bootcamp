@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\dev\Bootcamp\Bootcamp-Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
+set "VIRTUAL_ENV=C:\dev\Bootcamp\Bootcamp\Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

@@ -1,4 +1,4 @@
-#!c:\dev\bootcamp\bootcamp-exercises\week 12 - bottle & django\bottle login\star\ex1\venv\scripts\python.exe
+#!c:\dev\bootcamp\bootcamp\exercises\week 12 - bottle & django\bottle login\star\ex1\venv\scripts\python.exe
 # -*- coding: utf-8 -*-
 """
 Bottle is a fast and simple micro-framework for small web applications. It

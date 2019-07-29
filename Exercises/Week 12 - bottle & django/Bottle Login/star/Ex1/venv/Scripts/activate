@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\dev\Bootcamp\Bootcamp-Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
+VIRTUAL_ENV="C:\dev\Bootcamp\Bootcamp\Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

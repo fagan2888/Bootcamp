@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\dev\Bootcamp\Bootcamp-Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
+$env:VIRTUAL_ENV="C:\dev\Bootcamp\Bootcamp\Exercises\Week 12 - bottle & django\Bottle Login\star\Ex1\venv"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
