@@ -1,0 +1,9 @@
+<ul>
+    {% for post in posts %}
+        <h1>post:</h1>
+        <li>{{post.title}}</li>
+        <li>{{post.publish_date}}</li>
+        <li>{{post.content}}</li>
+        <li>{{post.author}}</li>
+    {% endfor %}
+<ul>
