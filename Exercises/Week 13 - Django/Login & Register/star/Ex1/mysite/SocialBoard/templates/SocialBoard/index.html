@@ -1,0 +1,29 @@
+{% block content %}
+{{ user }}
+{% if user.is_authenticated %}
+     <ul>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+    </br>
+    <ul>
+        {% for post in posts %}
+            <h1>post:</h1>
+            <li>{{post.title}}</li>
+            <li>{{post.publish_date}}</li>
+            <li>{{post.content}}</li>
+            <li>{{post.author}}</li>
+        {% endfor %}
+    <ul>
+    
+{% else %}
+    <ul>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register'%}">Register</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+{% endif %}
+
+<br/>
+   
+
+{% endblock %}
