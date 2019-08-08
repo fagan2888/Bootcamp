@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'SocialBoard/css/post.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Biko's Billboard</title>
+</head>
+
+<body>
+    <div class="board">
+        <h1 id="maintitle">Billboard</h1>
+        <div id="row">
+            {% if posts %}
+            {% for post in posts %}
+            <fieldset class="post_div center-block">
+                <legend>
+                    <p class="pubdate">{{post.publish_date|date:'d/m/y'}}</p>
+                </legend>
+                <p class="posttitle">{{post.title}}</p>
+                <p class="postmsg">{{post.content}}</p>
+                <p class="postauthor">{{post.author}}</p>
+                <br>
+                </div>
+            </fieldset>
+            {% endfor %}
+            {% else %}
+            <p>No messages...
+                Click the '+' button to add a new message</p>
+            {% endif %}
+        </div>
+        <div class="newpost">
+            <fieldset class="center-block" id="newpostdiv" style="display: none;">
+                <legend>
+                    <p class="pubdate" id="newpostdate"></p>
+                </legend>
+                <input type="text" class="form-control" id="newtitle" placeholder="Title..">
+                <textarea class="form-control" rows="5" id="newtext" placeholder="Your message here.."></textarea>
+                <input type="text" class="form-control" id="newauthor" value="{{user.username}}" placeholder="Your name">
+                <br>
+                <br>
+            </fieldset>
+            <div class="center-block bordernewmsg" id="confirmbox" style="display: none;">
+                <i class="fa fa-times" id="closebtn" aria-hidden="true"></i>
+                <i class="fa fa-check" id="confirmbtn" aria-hidden="true"></i>
+            </div>
+            <div class="center-block bordernewmsg" id="newpostbtn">
+                <i class="fa fa-plus pulse" id="plusbtn" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'SocialBoard/js/jqury.js' %} "></script>
+    <script src="{% static 'SocialBoard/js/post.js' %} "></script>
+</body>
+
+</html>
+
+<!-- <ul>
+    {% for post in posts %}
+        <h1>post:</h1>
+        <li>{{post.title}}</li>
+        <li>{{post.publish_date}}</li>
+        <li>{{post.content}}</li>
+        <li>{{post.author}}</li>
+    {% endfor %}
+<ul> -->
